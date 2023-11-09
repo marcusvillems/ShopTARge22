@@ -1,0 +1,19 @@
+﻿@model ShopTARge22.Models.ChuckNorris.SearchChuckNorrisJokeViewModel
+
+<h1>Chuck Norris Jokes</h1>
+<form method="post">
+    <div class="container">
+        <div class="form-group col-md-offset-3 col-md-5">
+            <h2>Todays joke is</h2>
+            <label asp-for="JokeName" style="font-family: Arial"></label>
+            <input asp-for="JokeName" class="form-control" />
+            <span asp-validation-for="JokeName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-group col-md-offset-3 col-md-5">
+            <button asp-controller="chuckNorrisJokes" asp-action="searchChuck" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+</form>
+</div>
