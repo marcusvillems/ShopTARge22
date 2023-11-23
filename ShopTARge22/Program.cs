@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using ShopTARge22.Core.ServiceInterface;
 using ShopTARge22.ApplicationServices.Services;
 using Microsoft.Extensions.FileProviders;
+using ShopTARge22.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddScoped<IRealEstatesServices, RealEstateServices>();
 builder.Services.AddScoped<IKindergartenServices, KindergartenServices>();
 builder.Services.AddScoped<IWeatherForecastServices, WeatherForecastServices>();
 builder.Services.AddScoped<IChuckNorrisServices, ChuckNorrisServices>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 
 builder.Services.AddDbContext<ShopTARge22Context>(options =>
